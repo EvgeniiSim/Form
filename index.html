@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <form action="#" class="form">
+        <div class="form__top-text">
+            Заполните заявку
+            <br>
+            После отправки заявки, вам будут поступать предложения продовцов
+            о наличии автозапчестей
+        </div>  
+        <div class="form__body">
+            <div class="form__item">
+                <label for="detail">
+                    Наименование запчасти
+                </label>
+                <input type="text" id="detail" required placeholder="Бачок">
+            </div>
+            <div class="form__item">
+                <label for="detailNumber">
+                    Номер автозапчасти
+                </label>
+                <input type="text" id="detailNumber" placeholder="6874790817">
+            </div>
+            <div class="form__item">
+                <label>
+                    Новая или б/у
+                </label>
+                <div class="select">
+                    <div class="select__output">
+                        Новая
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option">Новая</div>
+                        <div class="select__option">Б/у</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label for="address">
+                    Адрес доставки
+                </label>
+                <input type="text" placeholder="Санкт-Петербург" id="address">
+            </div>
+            <div class="form__item">
+                <label>
+                    Марка
+                </label>
+                <div class="select">
+                    <div class="select__output">
+                        Марка
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option">Марка</div>
+                        <div class="select__option">Марка</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label>
+                    Марка
+                </label>
+                <div class="select">
+                    <div class="select__output">
+                        Марка
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option">Марка</div>
+                        <div class="select__option">Марка</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label>
+                    Марка
+                </label>
+                <div class="select">
+                    <div class="select__output">
+                        Марка
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option">Марка</div>
+                        <div class="select__option">Марка</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label for="additional">
+                    Дополнительно
+                </label>
+                <textarea id="additional" placeholder="Доплительно"></textarea>
+            </div>
+            <div class="form__item">
+                <label for="additional">
+                    Выберите фото
+                </label>
+                <input type="file" accept=".png,.jpeg,.jpg" multiple>
+            </div>
+            <button type="submit" class="form__submit">
+                Отправить
+            </button>
+            <div class="form__bottom-text">
+                У вас есть вопросы? <a href="https://t.me/ManyParts">https://t.me/ManyParts</a>
+            </div>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
