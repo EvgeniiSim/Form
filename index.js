@@ -76,6 +76,7 @@ const popup = document.querySelector('.popup');
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', () => {
+    e.preventDefault()
     popup.classList.add('_open');
 })
 
