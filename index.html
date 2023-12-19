@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="choices.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Form</title>
 </head>
@@ -28,18 +29,17 @@
                 <input type="text" id="detailNumber" placeholder="6874790817">
             </div>
             <div class="form__item">
-                <label>
+                <label for="new-or-old">
                     Новая или б/у
                 </label>
-                <div class="select">
-                    <div class="select__output">
+                <select name="Новая или б/у" class="custom-select" id="new-or-old">
+                    <option value="new">
                         Новая
-                    </div>
-                    <div class="select__options">
-                        <div class="select__option">Новая</div>
-                        <div class="select__option">Б/у</div>
-                    </div>
-                </div>
+                    </option>
+                    <option value="old">
+                        Б/у
+                    </option>
+                </select>
             </div>
             <div class="form__item">
                 <label for="address">
@@ -48,46 +48,43 @@
                 <input type="text" placeholder="Санкт-Петербург" id="address">
             </div>
             <div class="form__item">
-                <label>
+                <label for="mark">
                     Марка
                 </label>
-                <div class="select">
-                    <div class="select__output">
+                <select name="Марка" class="custom-select" id="mark">
+                    <option value="mark">
                         Марка
-                    </div>
-                    <div class="select__options">
-                        <div class="select__option">Марка</div>
-                        <div class="select__option">Марка</div>
-                    </div>
-                </div>
+                    </option>
+                    <option value="mark">
+                        Марка
+                    </option>
+                </select>
             </div>
             <div class="form__item">
-                <label>
+                <label for="mark">
                     Марка
                 </label>
-                <div class="select">
-                    <div class="select__output">
+                <select name="Марка" class="custom-select" id="mark">
+                    <option value="mark">
                         Марка
-                    </div>
-                    <div class="select__options">
-                        <div class="select__option">Марка</div>
-                        <div class="select__option">Марка</div>
-                    </div>
-                </div>
+                    </option>
+                    <option value="mark">
+                        Марка
+                    </option>
+                </select>
             </div>
             <div class="form__item">
-                <label>
+                <label for="mark">
                     Марка
                 </label>
-                <div class="select">
-                    <div class="select__output">
+                <select name="Марка" class="custom-select" id="mark">
+                    <option value="mark">
                         Марка
-                    </div>
-                    <div class="select__options">
-                        <div class="select__option">Марка</div>
-                        <div class="select__option">Марка</div>
-                    </div>
-                </div>
+                    </option>
+                    <option value="mark">
+                        Марка
+                    </option>
+                </select>
             </div>
             <div class="form__item">
                 <label for="additional">
@@ -96,10 +93,16 @@
                 <textarea id="additional" placeholder="Доплительно"></textarea>
             </div>
             <div class="form__item">
-                <label for="additional">
+                <label for="file" class="form__file-label">
                     Выберите фото
-                </label>
-                <input type="file" accept=".png,.jpeg,.jpg" multiple>
+                    <div class="form__file-container">
+                        <div class="form__file-inner">
+                            <div class="form__file-item">
+                                <img src="icons/plus.svg" alt="Добавить изображение" class="form__file-icon">
+                            </div>
+                        </div>
+                    </div>
+                <input type="file" id="file" accept="image/png,image/jpeg,image/jpg" class="input__file" multiple>
             </div>
             <button type="submit" class="form__submit">
                 Отправить
@@ -109,6 +112,7 @@
             </div>
         </div>
     </form>
+    <script src="choices.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
