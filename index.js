@@ -71,3 +71,16 @@ const filePreview = () => {
 }
 
 filePreview()
+
+const popup = document.querySelector('.popup');
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', () => {
+    popup.classList.add('_open');
+})
+
+document.body.addEventListener('click', (e) => {
+    if (!e.target.closest('.popup__inner')) {
+        popup.classList.remove('_open');
+    }
+})
