@@ -13,8 +13,9 @@ customSelect()
 
 
 const filePreview = () => {
-    const container = document.querySelector('.form__file-inner');
-    const input = document.querySelector('.input__file');
+    const form = document.querySelector('#carForm');
+    const container = form.querySelector('.form__file-inner');
+    const input = form.querySelector('.input__file');
     input.addEventListener('change', filePreview);
 
     function filePreview() {
@@ -85,3 +86,27 @@ document.body.addEventListener('click', (e) => {
         popup.classList.remove('_open');
     }
 })
+
+
+////// Tabs START
+{
+    if (document.querySelectorAll('.form__body[data-tab]')) {
+        const tabsBtns = document.querySelectorAll('.form__tabs-btn');
+        const tabsItems = document.querySelectorAll('.form__body[data-tab]');
+        tabsBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                for (let i = 0; i < tabsBtns.length; i++) {
+                    tabsBtns[i].classList.remove('_open');
+                    tabsItems[i].classList.remove('_open');
+                }
+                btn.classList.add('_open');
+
+                const currentTabIndex = btn.getAttribute('data-tab');
+                const currentBody = document.querySelector(`.form__body[data-tab='${currentTabIndex}']`);
+                currentBody.classList.add('_open');
+
+            })
+        })
+    }
+}
+////// Tabs EnD

@@ -1,123 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="choices.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Form</title>
-</head>
-<body>
-    <form action="#" class="form">
-        <div class="form__top-text">
-            Заполните заявку
-            <br>
-            После отправки заявки, вам будут поступать предложения продовцов
-            о наличии автозапчестей
-        </div>  
-        <div class="form__body">
-            <div class="form__item">
-                <label for="detail">
-                    Наименование запчасти
-                </label>
-                <input type="text" id="detail" required placeholder="Бачок">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="choices.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="#" class="form" id="carForm">
+            <div class="form__top-text">
+                Заполните заявку
+                <br />
+                После отправки заявки, вам будут поступать предложения продовцов
+                о наличии автозапчестей
             </div>
-            <div class="form__item">
-                <label for="detailNumber">
-                    Номер автозапчасти
-                </label>
-                <input type="text" id="detailNumber" placeholder="6874790817">
-            </div>
-            <div class="form__item">
-                <label for="new-or-old">
-                    Новая или б/у
-                </label>
-                <select name="Новая или б/у" class="custom-select" id="new-or-old">
-                    <option value="new">
-                        Новая
-                    </option>
-                    <option value="old">
-                        Б/у
-                    </option>
-                </select>
-            </div>
-            <div class="form__item">
-                <label for="address">
-                    Адрес доставки
-                </label>
-                <input type="text" placeholder="Санкт-Петербург" id="address">
-            </div>
-            <div class="form__item">
-                <label for="mark">
-                    Марка
-                </label>
-                <select name="Марка" class="custom-select" id="mark">
-                    <option value="mark">
-                        Марка
-                    </option>
-                    <option value="mark">
-                        Марка
-                    </option>
-                </select>
-            </div>
-            <div class="form__item">
-                <label for="mark">
-                    Марка
-                </label>
-                <select name="Марка" class="custom-select" id="mark">
-                    <option value="mark">
-                        Марка
-                    </option>
-                    <option value="mark">
-                        Марка
-                    </option>
-                </select>
-            </div>
-            <div class="form__item">
-                <label for="mark">
-                    Марка
-                </label>
-                <select name="Марка" class="custom-select" id="mark">
-                    <option value="mark">
-                        Марка
-                    </option>
-                    <option value="mark">
-                        Марка
-                    </option>
-                </select>
-            </div>
-            <div class="form__item">
-                <label for="additional">
-                    Дополнительно
-                </label>
-                <textarea id="additional" placeholder="Доплительно"></textarea>
-            </div>
-            <div class="form__item">
-                <label for="file" class="form__file-label">
-                    Выберите фото
-                    <div class="form__file-container">
-                        <div class="form__file-inner">
-                            <div class="form__file-item">
-                                <img src="icons/plus.svg" alt="Добавить изображение" class="form__file-icon">
+            <div class="form__body">
+                <div class="form__item">
+                    <label for="detail"> Наименование запчасти </label>
+                    <input
+                        type="text"
+                        id="detail"
+                        required
+                        placeholder="Бачок"
+                    />
+                </div>
+                <div class="form__item">
+                    <label for="detailNumber"> Номер автозапчасти </label>
+                    <input
+                        type="text"
+                        id="detailNumber"
+                        placeholder="6874790817"
+                    />
+                </div>
+                <div class="form__item">
+                    <label for="new-or-old"> Новая или б/у </label>
+                    <select
+                        name="Новая или б/у"
+                        class="custom-select"
+                        id="new-or-old"
+                    >
+                        <option value="new">Новая</option>
+                        <option value="old">Б/у</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label for="address"> Адрес доставки </label>
+                    <input
+                        type="text"
+                        placeholder="Санкт-Петербург"
+                        id="address"
+                    />
+                </div>
+                <div class="form__item">
+                    <label for="mark"> Марка </label>
+                    <select name="Марка" class="custom-select" id="mark">
+                        <option value="mark">Марка</option>
+                        <option value="mark">Марка</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label for="mark"> Марка </label>
+                    <select name="Марка" class="custom-select" id="mark">
+                        <option value="mark">Марка</option>
+                        <option value="mark">Марка</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label for="mark"> Марка </label>
+                    <select name="Марка" class="custom-select" id="mark">
+                        <option value="mark">Марка</option>
+                        <option value="mark">Марка</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label> Дополнительно </label>
+                    <textarea placeholder="Доплительно"></textarea>
+                </div>
+                <div class="form__item">
+                    <label for="carFile" class="form__file-label">
+                        Выберите фото
+                        <div class="form__file-container">
+                            <div class="form__file-inner">
+                                <div class="form__file-item">
+                                    <img
+                                        src="icons/plus.svg"
+                                        alt="Добавить изображение"
+                                        class="form__file-icon"
+                                    />
+                                </div>
                             </div>
                         </div>
+                    </label>
+                    <input
+                        type="file"
+                        id="carFile"
+                        accept="image/*"
+                        class="input__file"
+                        multiple
+                    />
+                </div>
+                <button type="submit" class="form__submit">Отправить</button>
+                <div class="form__bottom-text">
+                    У вас есть вопросы?
+                    <a href="https://t.me/ManyParts">https://t.me/ManyParts</a>
+                </div>
+            </div>
+        </form>
+
+        <form action="#" class="form" id="chinaForm">
+            <div class="form__top-text">
+                Заполните заявку
+                <br />
+                После отправки заявки, вам будут поступать предложения продовцов
+                о наличии автозапчестей
+            </div>
+            <div class="form__tabs">
+                <div data-tab="1" class="form__tabs-btn _open">
+                    Знаю где купить товары
+                </div>
+                <div data-tab="2" class="form__tabs-btn">
+                    Не знаю где купить товар
+                </div>
+            </div>
+            <div data-tab="1" class="form__body _open">
+                <div class="form__item form__item-china">
+                    <div class="form__item-row">
+                        <div class="">
+                            <textarea name="Описание" placeholder="Описание"></textarea>
+                        </div>
+                        <div class="input__number-wrap">
+                            <input type="number" placeholder="100">
+                        </div>
+                        <label for="chinaFile">
+                            <div class="form__file-container">
+                                <div class="form__file-inner">
+                                    <div class="form__file-item">
+                                        <img
+                                            src="icons/plus.svg"
+                                            alt="Добавить изображение"
+                                            class="form__file-icon"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
                     </div>
-                <input type="file" id="file" accept="image/png,image/jpeg,image/jpg" class="input__file" multiple>
+                    <input type="file" id="chinaFile" class="input__file" />
+                </div>
+                <div class="form__item">
+                    <div>Сраховка груза</div>
+                    <input
+                        type="checkbox"
+                        class="input__checkbox"
+                        name="Страховка груза"
+                        id="insurance"
+                    />
+                    <label for="insurance"> 
+                        <img src="icons/check.svg" alt=Иконка"">
+                        2% стоимости товара 
+                    </label>
+                </div>
+                <div class="form__item">
+                    <input type="radio" name="view" id="view-1" />
+                    <label id="view" for="view-1"> Стандартная </label>
+                    <input type="radio" name="view" id="view-2" />
+                    <label id="view" for="view-2"> Обрешотка </label>
+                    <input type="radio" name="view" id="view-3" />
+                    <label id="view" for="view-3"> Паллетный борт </label>
+                    <input type="radio" name="view" id="view-4" />
+                    <label id="view" for="view-4"> Деревянный короб </label>
+                </div>
+                <div class="form__item">
+                    <label for="address"> Адрес доставки </label>
+                    <input
+                        type="text"
+                        placeholder="Санкт-Петербург"
+                        id="address"
+                    />
+                </div>
+                <button type="submit" class="form__submit">Отправить</button>
+                <div class="form__bottom-text">
+                    У вас есть вопросы?
+                    <a href="https://t.me/ManyParts">https://t.me/ManyParts</a>
+                </div>
             </div>
-            <button type="submit" class="form__submit">
-                Отправить
-            </button>
-            <div class="form__bottom-text">
-                У вас есть вопросы? <a href="https://t.me/ManyParts">https://t.me/ManyParts</a>
+            <div data-tab="2" class="form__body">
+                <div class="form__item form__item-china">
+                    <div class="form__item-row">
+                        <div>Описать требуемые товары</div>
+                        <div>Количество</div>
+                        <div>Фото</div>
+                        <textarea name="Описание"></textarea>
+                        <textarea name="Количество"></textarea>
+                        <label for="chinaFile">
+                            <div class="form__file-container">
+                                <div class="form__file-inner">
+                                    <div class="form__file-item">
+                                        <img
+                                            src="icons/plus.svg"
+                                            alt="Добавить изображение"
+                                            class="form__file-icon"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="file" id="chinaFile" class="input__file" />
+                    </div>
+                </div>
+                <div class="form__item">
+                    <div>Сраховка груза</div>
+                    <label for="insurance"> 2% стоимости товара </label>
+                    <input
+                        type="checkbox"
+                        class="input__checkbox"
+                        name="Страховка груза"
+                        id="insurance"
+                    />
+                </div>
+                <div class="form__item">
+                    <label for="view-1"> Стандартная </label>
+                    <label for="view-2"> Обрешотка </label>
+                    <label for="view-3"> Паллетный борт </label>
+                    <label for="view-4"> Деревянный короб </label>
+                    <input type="checkbox" id="view-1" />
+                    <input type="checkbox" id="view-2" />
+                    <input type="checkbox" id="view-3" />
+                    <input type="checkbox" id="view-4" />
+                </div>
+                <div class="form__item">
+                    <label for="address"> Адрес доставки </label>
+                    <input
+                        type="text"
+                        placeholder="Санкт-Петербург"
+                        id="address"
+                    />
+                </div>
+                <button type="submit" class="form__submit">Отправить</button>
+                <div class="form__bottom-text">
+                    У вас есть вопросы?
+                    <a href="https://t.me/ManyParts">https://t.me/ManyParts</a>
+                </div>
+            </div>
+        </form>
+        <div class="popup">
+            <div class="popup__inner">
+                Заявка 123456789 отправлена. Ожидайте предложений от продавцов
             </div>
         </div>
-    </form>
-    <div class="popup">
-        <div class="popup__inner">
-            Заявка 123456789 отправлена. Ожидайте предложений от продавцов
-        </div>
-    </div>
-    <script src="choices.min.js"></script>
-    <script src="index.js"></script>
-</body>
+        <script src="choices.min.js"></script>
+        <script src="index.js"></script>
+    </body>
 </html>
